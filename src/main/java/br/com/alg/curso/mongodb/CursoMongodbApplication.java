@@ -1,4 +1,4 @@
-package br.com.alg.curso_mongodb;
+package br.com.alg.curso.mongodb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
