@@ -30,6 +30,17 @@ public class UserService {
 		return this.repository.insert(obj);
 	}
 	
+	public User update(User obj) {
+		User newObj = this.findById(obj.getId());
+		this.updateData(newObj, obj);
+		return this.repository.save(newObj);
+	}
+	
+	private void updateData(User newObj, User obj) {
+		newObj.setName(obj.getName());
+		newObj.setEmail(obj.getEmail());
+	}
+
 	public void delete(String id) {
 		User user = this.findById(id);
 		this.repository.delete(user);
